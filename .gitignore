@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+chroma_db/
+*.db
+*.db-wal
+*.db-shm
+synthetic_data.json
+audit_log.db
+recordings.json

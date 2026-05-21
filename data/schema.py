@@ -211,8 +211,10 @@ class PatientRecord(BaseModel):
     @classmethod
     def must_be_synthetic(cls, value):
         if value == False:
-            raise ValueError(f"is_synthetic must be True but got {value}")
-        pass
+            raise ValueError(
+            "is_synthetic must be True. System processes synthetic data only."
+        )
+        return value
 
     @field_validator("proteinuria_level")
     @classmethod

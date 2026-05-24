@@ -8,4 +8,4 @@ chroma_db/
 *.db-shm
 synthetic_data.json
 audit_log.db
-recordings.json
+recordings.jsonchroma_guidelines/

@@ -95,6 +95,9 @@ class RiskExplainer:
 
         # Use CALIBRATED model for the probability shown to clinicians
         probability = float(self.calibrated_model.predict_proba(x)[0, 1])
+        # Cap extreme predictions — no responsible clinical tool claims certainty
+        probability = min(probability, 0.95)
+        probability = max(probability, 0.01)
 
         # Use BASE model for SHAP feature contributions
         shap_values = self.explainer.shap_values(x)

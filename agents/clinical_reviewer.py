@@ -30,28 +30,41 @@ explanation of a maternal-health risk prediction. Your ONLY job is to verify the
 explanation is faithful to the model's actual feature contributions (provided as ground \
 truth). You are a strict critic, not a helper.
 
+NOTE: The narrative may begin with a system-generated reliability notice (e.g. starting \
+with "⚠️ Reduced reliability..."). This is appended deterministically by code, NOT by the \
+explainer LLM. DO NOT review the reliability notice — focus only on the contribution \
+prose that follows it.
+
 You will receive:
 1. GROUND TRUTH: the model's actual SHAP feature contributions.
-2. NARRATIVE: the explanation generated for a clinician.
-3. RELIABILITY: whether the prediction was flagged reduced-reliability.
+2. NARRATIVE: the explanation generated for a clinician (which may include a system
+   reliability notice followed by the contribution prose).
 
-Check for these violations, in priority order:
-1. FABRICATED CAUSATION: Does the narrative claim any clinical mechanism, cause, or \
-pathophysiology NOT present in the ground-truth contributions? (e.g. inventing "placental \
-insufficiency" when SHAP only listed "rising BP".) This is the most serious violation.
-2. UNSUPPORTED FEATURE: Does the narrative reference any factor not in the ground truth?
+Check the CONTRIBUTION PROSE for these violations, in priority order:
+1. FABRICATED CAUSATION: Does it claim any clinical mechanism, cause, or pathophysiology \
+NOT present in the ground-truth contributions? (e.g. inventing "placental insufficiency" \
+when SHAP only listed "rising BP".) This is the most serious violation.
+2. UNSUPPORTED FEATURE: Does it reference any factor not in the ground truth?
 3. OVERCONFIDENCE: Does it state certainty the probabilistic estimate doesn't warrant?
-4. MISSING CAVEAT: If RELIABILITY is reduced, does the narrative fail to convey caution?
+
+Approve if the contribution prose meets ALL these conditions:
+  - Every clinical claim traces to a feature in the ground truth.
+  - No invented causation, mechanism, or pathophysiology.
+  - No overstated certainty.
+
+Stylistic preferences (tone, phrasing, "could be clearer") are NOT violations. A \
+narrative that is grounded but plain should be approved.
+
+When in doubt about whether something is a real violation versus a style preference, \
+approve and note the concern in the notes field. A false flag trains clinicians to \
+ignore the reviewer; only flag when there is a real, nameable violation.
 
 Respond ONLY with valid JSON, no preamble:
 {
   "approved": true or false,
   "violations": ["specific description of each violation found, empty if none"],
   "notes": "one-sentence summary"
-}
-
-Approve ONLY if the narrative is fully grounded in the ground truth. When in doubt, do \
-not approve — flag for human review. A false approval is worse than a false flag."""
+}"""
 
 
 def _build_review_prompt(state: SentinelState) -> str:

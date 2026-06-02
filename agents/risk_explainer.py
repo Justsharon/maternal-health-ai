@@ -39,17 +39,23 @@ decreased the model's estimate".
 5. Always end with: clinical correlation and clinician confirmation are required.
 6. Use clear, professional language an OBGYN would respect. No hype, no false certainty.
 7. Keep it under 120 words.
+8. Do NOT mention reliability, model limitations, confidence, or caution. Other parts of \
+the system handle those — your job is the feature contributions only.
 
 You are describing a model's reasoning, not making a diagnosis."""
 
 def _format_shap_for_prompt(explanation: dict) -> str:
-    """Format SHAP output into a clean prompt input."""
+    """Format SHAP output into a clean prompt input.
+    
+    Reliability framing is handled deterministically OUTSIDE this function
+    (appended after the LLM call). The LLM is responsible only for prose
+    around the feature contributions.
+    """
     lines = [
         f"Risk estimate: {explanation['probability']:.1%}",
         f"Population baseline: {explanation['base_probability']:.1%}",
         "",
-        "Feature contributions (SHAP values — positive increases the estimate, "
-        "negative decreases it):",
+        "Feature contributions (positive increases the estimate, negative decreases it):",
     ]
     for c in explanation["top_contributions"]:
         if abs(c["shap_value"]) > 0.01:
@@ -62,10 +68,17 @@ def _format_shap_for_prompt(explanation: dict) -> str:
 def risk_explainer(state: SentinelState) -> SentinelState:
     """
     Agent 5 — generate a grounded plain-language explanation.
-    
-    Reads:  validated_record
-    Writes: explanation (dict with both raw SHAP and the narrative)
+
+    The LLM is responsible for prose around SHAP contributions only.
+    Reliability framing is appended DETERMINISTICALLY here when the
+    calibrator's flag is set — never by the LLM. This eliminates the
+    fabrication class entirely: the LLM cannot over- or under-state
+    reliability because it does not author reliability claims at all.
+
+    Reads:  validated_record, reliability_flag, reliability_reason
+    Writes: explanation (with deterministically-framed narrative)
     """
+
     global _explainer
     if _explainer is None:
         _explainer = RiskExplainer()
@@ -84,6 +97,17 @@ def risk_explainer(state: SentinelState) -> SentinelState:
         user_prompt=user_prompt,
         temperature=0.2,
     )
+
+    reliability_flag = state.get("reliability_flag")
+    reliability_reason = state.get("reliability_reason")
+
+    if reliability_flag == "reduced_reliability" and reliability_reason:
+        narrative = (
+            f"Reduced reliability for this prediction: {reliability_reason}\n\n"
+            f"{narrative}"
+        )
+    else:
+        narrative = narrative
     
     # Store BOTH the raw SHAP (provable) and the narrative (readable)
     state["explanation"] = {

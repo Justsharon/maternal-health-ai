@@ -14,6 +14,9 @@ Reference: Phase 2 RAG; Aria filter-as-trust-boundary; the
 unwarranted-validation trap (juxtaposition implies endorsement).
 """
 
+import json
+from pathlib import Path
+
 import chromadb
 from chromadb.utils import embedding_functions
 
@@ -50,12 +53,30 @@ FEATURE_TO_TAGS = {
 
 
 _collection = None
+_cache = None
+
+
+def _load_cache_if_available() -> dict | None:
+    """Load the precomputed cache if it exists. Returns None for dev mode."""
+    global _cache
+    if _cache is not None:
+        return _cache
+    cache_path = Path("data/retriever_cache.json")
+    if not cache_path.exists():
+        return None
+    with open(cache_path) as f:
+        _cache = json.load(f)
+    return _cache
 
 
 def _get_collection():
-    """Load the ChromaDB guidelines collection (once)."""
+    """Load the ChromaDB guidelines collection. Used only in dev mode."""
     global _collection
     if _collection is None:
+        # Imports kept local so the runtime image doesn't need chromadb +
+        # sentence-transformers if the cache exists.
+        import chromadb
+        from chromadb.utils import embedding_functions
         client = chromadb.PersistentClient(path=CHROMA_PATH)
         embed_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
             model_name="all-MiniLM-L6-v2"
@@ -74,7 +95,6 @@ def _features_to_tags(top_contributions: list) -> list:
         feature = c["feature"]
         if feature in FEATURE_TO_TAGS:
             tags.extend(FEATURE_TO_TAGS[feature])
-    # Deduplicate while preserving order
     seen = set()
     ordered = []
     for t in tags:
@@ -88,15 +108,18 @@ def literature_retriever(state: SentinelState, top_n: int = 3) -> SentinelState:
     """
     Agent 6 — retrieve guidance related to the patient's risk factors.
     
+    Two modes:
+      Production: precomputed cache loaded from data/retriever_cache.json
+                  (no embedder, no ChromaDB resident in memory)
+      Dev:        live ChromaDB query if cache is absent
+
     Reads:  explanation (top_contributions)
     Writes: relevant_guidelines, guideline_sources
     """
     explanation = state.get("explanation") or {}
     top_contributions = explanation.get("top_contributions", [])
     
-    # Only consider features that actually moved the estimate
     significant = [c for c in top_contributions if abs(c["shap_value"]) > 0.01]
-    
     tags = _features_to_tags(significant)
     
     if not tags:
@@ -104,99 +127,42 @@ def literature_retriever(state: SentinelState, top_n: int = 3) -> SentinelState:
         state["guideline_sources"] = []
         return state
     
-    collection = _get_collection()
-    
-    # Build a query from the tags (the trust boundary: we query for the
-    # clinical domains the patient's risk factors fall into)
     query_text = " ".join(tags)
     
-    results = collection.query(
-        query_texts=[query_text],
-        n_results=top_n,
-    )
+    # Try the precomputed cache first (production path)
+    cache = _load_cache_if_available()
+    if cache is not None:
+        cached = cache.get(query_text)
+        if cached is not None:
+            state["relevant_guidelines"] = cached["guidelines"]
+            state["guideline_sources"] = cached["sources"]
+            return state
+        # Cache exists but this specific query isn't in it — fall through
+        # to live retrieval if we have ChromaDB available; otherwise empty.
     
-    guidelines = []
-    sources = []
-    if results["documents"] and results["documents"][0]:
-        for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
-            guidelines.append({
-                "summary": doc,
-                "source": meta["source"],
-                "issuing_body": meta["issuing_body"],
-            })
-            if meta["source"] not in sources:
-                sources.append(meta["source"])
-    
-    state["relevant_guidelines"] = guidelines
-    state["guideline_sources"] = sources
+    # Dev mode (or cache miss): live ChromaDB query
+    try:
+        collection = _get_collection()
+        results = collection.query(query_texts=[query_text], n_results=top_n)
+        
+        guidelines = []
+        sources = []
+        if results["documents"] and results["documents"][0]:
+            for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
+                guidelines.append({
+                    "summary": doc,
+                    "source": meta["source"],
+                    "issuing_body": meta["issuing_body"],
+                })
+                if meta["source"] not in sources:
+                    sources.append(meta["source"])
+        
+        state["relevant_guidelines"] = guidelines
+        state["guideline_sources"] = sources
+    except Exception:
+        # Production with cache miss and no ChromaDB available: return empty
+        # rather than crash. Honest fallback.
+        state["relevant_guidelines"] = []
+        state["guideline_sources"] = []
     
     return state
-
-
-def format_guidance_for_display(state: SentinelState) -> str:
-    """
-    Format the retrieved guidance with the anti-validation framing.
-    This is what the dashboard will show — clearly separated from the
-    prediction, framed as 'related' not 'supporting'.
-    """
-    guidelines = state.get("relevant_guidelines") or []
-    if not guidelines:
-        return "No directly related guidance found for this patient's risk factors."
-    
-    lines = ["Related clinical guidance (for the risk factors in this assessment):"]
-    lines.append("")
-    for g in guidelines:
-        lines.append(f"• {g['source']}")
-        lines.append(f"  {g['summary']}")
-        lines.append("")
-    lines.append(
-        "Note: This guidance relates to the clinical factors considered in "
-        "this assessment. It does not validate or endorse the model's specific "
-        "risk estimate. Clinical judgment and confirmation are required."
-    )
-    return "\n".join(lines)
-
-
-# --- Standalone test ---
-if __name__ == "__main__":
-    from data.generator import load_dataset
-    from models.explainer import RiskExplainer
-    
-    patients = load_dataset("synthetic_data.json")
-    explainer = RiskExplainer()
-    
-    # Find a high-risk patient (BP-driven) and test retrieval
-    high_risk = None
-    for p in patients:
-        exp = explainer.explain(p)
-        if exp["probability"] > 0.6:
-            high_risk = (p, exp)
-            break
-    
-    if high_risk:
-        patient, exp = high_risk
-        state = {
-            "explanation": {
-                "top_contributions": exp["top_contributions"],
-            }
-        }
-        result = literature_retriever(state)
-        
-        print("=" * 65)
-        print(f"PATIENT: {patient.patient_id} (week {patient.current_gestational_week})")
-        print("=" * 65)
-        print("\nTop risk-driving features:")
-        for c in exp["top_contributions"][:5]:
-            if abs(c["shap_value"]) > 0.01:
-                print(f"  {c['feature']}: {c['shap_value']:+.3f}")
-        
-        tags = _features_to_tags(
-            [c for c in exp["top_contributions"] if abs(c["shap_value"]) > 0.01]
-        )
-        print(f"\nMapped topic tags: {tags}")
-        
-        print(f"\nRetrieved {len(result['relevant_guidelines'])} guidelines")
-        print(f"Sources: {result['guideline_sources']}")
-        print()
-        print("-" * 65)
-        print(format_guidance_for_display(result))

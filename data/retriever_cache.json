@@ -1,0 +1,833 @@
+{
+  "": {
+    "guidelines": [],
+    "sources": []
+  },
+  "blood_pressure monitoring gestational_age timing bp_trajectory warning_signs": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing proteinuria diagnosis warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing warning_signs": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing warning_signs proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring gestational_age timing warning_signs symptoms": {
+    "guidelines": [
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "bp_trajectory blood_pressure monitoring warning_signs gestational_age timing": {
+    "guidelines": [
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "General obstetric guidance (synthesised summary)",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory proteinuria diagnosis warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory warning_signs": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory warning_signs proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory warning_signs symptoms": {
+    "guidelines": [
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring bp_trajectory warning_signs symptoms risk_factors bmi": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring proteinuria diagnosis bp_trajectory": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing blood_pressure monitoring proteinuria diagnosis bp_trajectory warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "ACOG guidance on hypertensive disorders of pregnancy"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring proteinuria diagnosis warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring risk_factors prior_preeclampsia": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "WHO recommendations address the prevention and management of pre-eclampsia, including consideration of preventive measures for individuals identified as higher risk. Identification of elevated risk supports timely preventive and monitoring decisions made by the care team.",
+        "source": "WHO recommendations on prevention and treatment of pre-eclampsia",
+        "issuing_body": "World Health Organization"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "WHO recommendations on prevention and treatment of pre-eclampsia"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring risk_factors prior_preeclampsia warning_signs": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "WHO recommendations address the prevention and management of pre-eclampsia, including consideration of preventive measures for individuals identified as higher risk. Identification of elevated risk supports timely preventive and monitoring decisions made by the care team.",
+        "source": "WHO recommendations on prevention and treatment of pre-eclampsia",
+        "issuing_body": "World Health Organization"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "WHO recommendations on prevention and treatment of pre-eclampsia"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring warning_signs": {
+    "guidelines": [
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring warning_signs proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "gestational_age timing bp_trajectory blood_pressure monitoring warning_signs symptoms": {
+    "guidelines": [
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing proteinuria diagnosis bp_trajectory blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing proteinuria diagnosis risk_factors prior_preeclampsia blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing risk_factors prior_preeclampsia blood_pressure monitoring proteinuria diagnosis bp_trajectory": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "gestational_age timing risk_factors prior_preeclampsia bp_trajectory blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      },
+      {
+        "summary": "WHO recommendations address the prevention and management of pre-eclampsia, including consideration of preventive measures for individuals identified as higher risk. Identification of elevated risk supports timely preventive and monitoring decisions made by the care team.",
+        "source": "WHO recommendations on prevention and treatment of pre-eclampsia",
+        "issuing_body": "World Health Organization"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)",
+      "WHO recommendations on prevention and treatment of pre-eclampsia"
+    ]
+  },
+  "gestational_age timing risk_factors prior_preeclampsia bp_trajectory blood_pressure monitoring proteinuria diagnosis": {
+    "guidelines": [
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "proteinuria diagnosis gestational_age timing blood_pressure monitoring bp_trajectory": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "proteinuria diagnosis gestational_age timing blood_pressure monitoring bp_trajectory warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "proteinuria diagnosis gestational_age timing bp_trajectory blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  },
+  "proteinuria diagnosis gestational_age timing bp_trajectory blood_pressure monitoring warning_signs": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "NICE guidance on hypertension in pregnancy recommends regular blood pressure monitoring throughout pregnancy, with increased frequency for those showing rising readings or additional risk factors. Rising blood pressure trends are a recognised warning sign warranting closer surveillance.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Symptoms such as severe headache, visual disturbance, and upper abdominal pain may indicate progression of hypertensive disease in pregnancy and warrant prompt clinical assessment. These warning signs are considered alongside blood pressure and other findings.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)"
+    ]
+  },
+  "proteinuria diagnosis gestational_age timing risk_factors prior_preeclampsia bp_trajectory blood_pressure monitoring": {
+    "guidelines": [
+      {
+        "summary": "ACOG guidance describes blood pressure thresholds and the role of proteinuria assessment in the evaluation of hypertensive disorders of pregnancy. Sustained elevated blood pressure readings are central to clinical evaluation, alongside other signs and symptoms.",
+        "source": "ACOG guidance on hypertensive disorders of pregnancy",
+        "issuing_body": "American College of Obstetricians and Gynecologists"
+      },
+      {
+        "summary": "Recognised risk factors for pre-eclampsia include prior pre-eclampsia, chronic hypertension, first pregnancy, raised body mass index, multiple pregnancy, and pre-existing diabetes. Presence of high-risk factors may warrant preventive measures and increased monitoring as determined by the clinician.",
+        "source": "NICE Guideline NG133 (Hypertension in pregnancy)",
+        "issuing_body": "National Institute for Health and Care Excellence (UK)"
+      },
+      {
+        "summary": "Pre-eclampsia typically manifests after 20 weeks of gestation. Predictive warning signs such as rising blood pressure are less informative earlier in pregnancy, which is why risk assessment before 20 weeks relies more heavily on baseline risk factors than on emerging clinical trends.",
+        "source": "General obstetric guidance (synthesised summary)",
+        "issuing_body": "Demonstration summary \u2014 multiple sources"
+      }
+    ],
+    "sources": [
+      "ACOG guidance on hypertensive disorders of pregnancy",
+      "NICE Guideline NG133 (Hypertension in pregnancy)",
+      "General obstetric guidance (synthesised summary)"
+    ]
+  }
+}

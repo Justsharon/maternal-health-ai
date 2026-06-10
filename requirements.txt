@@ -1,0 +1,15 @@
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.9.2
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.0
+xgboost==2.1.2
+shap==0.46.0
+joblib==1.4.2
+chromadb==0.5.20
+sentence-transformers==3.3.1
+langgraph==0.2.50
+langchain-core==0.3.21
+groq==0.13.0
+python-dotenv==1.0.1

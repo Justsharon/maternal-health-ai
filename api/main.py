@@ -30,6 +30,9 @@ from data.generator import load_dataset
 from orchestrator import assess_patient, get_sentinel
 from agents.audit_logger import read_audit_log
 
+import json
+from pathlib import Path
+
 
 # --- Deployment configuration ---
 
@@ -61,22 +64,23 @@ DEMO_PATIENT_IDS = [
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Warm only what's needed for serving demo traffic.
-    
+
     Demo patients are pre-loaded (6 records, ~negligible memory).
     The full 5000-patient dataset is NOT loaded; it's only accessed
     by offline scripts like the fairness auditor.
     """
     print("Sentinel API starting...")
     app.state.orchestrator = get_sentinel()
-    
+
     # Lazy load: only the curated demo patients
-    full_dataset = {p.patient_id: p for p in load_dataset("synthetic_data.json")}
+    full_dataset = {p.patient_id: p for p in load_dataset(
+        "synthetic_data.json")}
     app.state.patients = {
         pid: full_dataset[pid] for pid in DEMO_PATIENT_IDS if pid in full_dataset
     }
     # Explicitly drop the full dict so Python can GC it
     del full_dataset
-    
+
     print(f"  Loaded {len(app.state.patients)} demo patients (lazy mode).")
     print(f"  Mock LLM mode: {os.getenv('USE_MOCK_LLM', 'true')}")
     yield
@@ -159,7 +163,7 @@ def list_demo_patients():
 def assess(patient: PatientRecord):
     """
     Run a patient through the full 9-agent pipeline.
-    
+
     The PatientRecord schema is the SAME one used by the privacy gate —
     validation happens once at this boundary. If the request is malformed
     or non-synthetic, FastAPI returns 422 before the orchestrator runs.
@@ -185,7 +189,8 @@ def assess_demo(patient_id: str):
     """
     patient = app.state.patients.get(patient_id)
     if patient is None:
-        raise HTTPException(status_code=404, detail=f"Patient {patient_id} not found")
+        raise HTTPException(
+            status_code=404, detail=f"Patient {patient_id} not found")
     if patient_id not in DEMO_PATIENT_IDS:
         raise HTTPException(
             status_code=403,
@@ -199,7 +204,8 @@ def assess_demo(patient_id: str):
 def get_audit_log(limit: int = 20):
     """Read recent audit entries (read-only — for the dashboard viewer)."""
     if limit < 1 or limit > 100:
-        raise HTTPException(status_code=400, detail="limit must be between 1 and 100")
+        raise HTTPException(
+            status_code=400, detail="limit must be between 1 and 100")
     entries = read_audit_log(limit=limit)
     # Filter to the fields exposed by AuditEntry schema; drop fields we don't surface
     return [
@@ -215,3 +221,20 @@ def get_audit_log(limit: int = 20):
         )
         for e in entries
     ]
+
+
+FAIRNESS_REPORT_PATH = Path("data/fairness_report.json")
+
+
+@app.get("/fairness_report")
+def get_fairness_report():
+    """Return the cached fairness report. Computed offline at build time
+    (see build/precompute_fairness.py). Surfaces both the named-clinical-group
+    decision metric and the residual-bucket detail for transparency.
+    """
+    if not FAIRNESS_REPORT_PATH.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="Fairness report not yet computed. Run build/precompute_fairness.py.",
+        )
+    return json.loads(FAIRNESS_REPORT_PATH.read_text())

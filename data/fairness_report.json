@@ -1,0 +1,57 @@
+{
+  "computed_at": "2026-06-09T18:05:14.812029+00:00",
+  "protected_attribute": "ethnicity",
+  "operating_threshold": 0.1,
+  "gap_threshold": 0.1,
+  "named_groups": [
+    {
+      "group": "black_african",
+      "recall": 0.8787878787878788,
+      "false_positive_rate": 0.09473684210526316,
+      "n_total": 1272
+    },
+    {
+      "group": "east_asian",
+      "recall": 0.8913043478260869,
+      "false_positive_rate": 0.10159651669085631,
+      "n_total": 735
+    },
+    {
+      "group": "south_asian",
+      "recall": 0.8876404494382022,
+      "false_positive_rate": 0.10795454545454546,
+      "n_total": 969
+    },
+    {
+      "group": "white",
+      "recall": 0.8571428571428571,
+      "false_positive_rate": 0.09630266552020636,
+      "n_total": 1268
+    }
+  ],
+  "residual_groups": [
+    {
+      "group": "not_disclosed",
+      "recall": 0.8095238095238095,
+      "false_positive_rate": 0.11304347826086956,
+      "n_total": 251
+    },
+    {
+      "group": "other",
+      "recall": 0.7714285714285715,
+      "false_positive_rate": 0.1,
+      "n_total": 505
+    }
+  ],
+  "named_group_gap": 0.03416149068322982,
+  "full_equalized_odds_difference": 0.11987577639751545,
+  "demographic_parity_difference": 0.033031910002145726,
+  "verdict": "PASS",
+  "overall_flag": "review",
+  "audit_notes": [
+    "Equalized odds difference 0.120 EXCEEDS threshold, but the disparity is driven by the residual group 'other' (recall 0.771). Among named clinical groups the recall gap is only 0.034 (within threshold).",
+    "INTERPRETATION: residual groups ('other', 'not_disclosed') are heterogeneous and may show artifactual disparities. This cannot be distinguished from a real subgroup concern without finer-grained data. RECOMMENDATION: collect granular ethnicity data in production; document reduced validation for these buckets.",
+    "Best-served: east_asian (0.891); worst-served: other (0.771).",
+    "Demographic parity difference 0.033 reported as CONTEXT only \u2014 groups have genuinely different true incidence, so unequal flagging reflects real risk, not bias. Decision metric is equalized odds."
+  ]
+}

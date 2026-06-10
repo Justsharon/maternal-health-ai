@@ -1,11 +1,24 @@
+# Python
 __pycache__/
 *.pyc
 .env
 .venv/
+
+# Databases (local-only state)
 chroma_db/
+chroma_guidelines/
 *.db
 *.db-wal
 *.db-shm
-synthetic_data.json
 audit_log.db
-recordings.jsonchroma_guidelines/
+
+# Build artifacts
+dashboard/node_modules/
+dashboard/.svelte-kit/
+dashboard/build/
+dashboard/.vercel/
+
+# OS / editor
+.DS_Store
+.vscode/
+node_modules/

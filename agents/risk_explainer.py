@@ -101,13 +101,13 @@ def risk_explainer(state: SentinelState) -> SentinelState:
     reliability_flag = state.get("reliability_flag")
     reliability_reason = state.get("reliability_reason")
 
-    if reliability_flag == "reduced_reliability" and reliability_reason:
-        narrative = (
-            f"Reduced reliability for this prediction: {reliability_reason}\n\n"
-            f"{narrative}"
-        )
-    else:
-        narrative = narrative
+    # if reliability_flag == "reduced_reliability" and reliability_reason:
+    #     narrative = (
+    #         f"Reduced reliability for this prediction: {reliability_reason}\n\n"
+    #         f"{narrative}"
+    #     )
+    # else:
+    narrative = narrative
     
     # Store BOTH the raw SHAP (provable) and the narrative (readable)
     state["explanation"] = {

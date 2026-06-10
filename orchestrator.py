@@ -31,6 +31,7 @@ from agents.confidence_calibrator import confidence_calibrator
 from agents.router import router
 from agents.risk_explainer import risk_explainer
 from agents.literature_retriever import literature_retriever
+from agents.clinical_reviewer import clinical_reviewer 
 from agents.audit_logger import audit_logger
 
 
@@ -68,6 +69,7 @@ def build_sentinel():
     graph.add_node("router", router)
     graph.add_node("risk_explainer", risk_explainer)
     graph.add_node("literature_retriever", literature_retriever)
+    graph.add_node("clinical_reviewer", clinical_reviewer)
     graph.add_node("audit_logger", audit_logger)
 
     # Entry
@@ -99,7 +101,8 @@ def build_sentinel():
 
     # Explainer -> retriever -> audit -> END
     graph.add_edge("risk_explainer", "literature_retriever")
-    graph.add_edge("literature_retriever", "audit_logger")
+    graph.add_edge("literature_retriever", "clinical_reviewer")
+    graph.add_edge("clinical_reviewer", "audit_logger")
     graph.add_edge("audit_logger", END)
 
     return graph.compile()
@@ -136,7 +139,8 @@ if __name__ == "__main__":
     from data.generator import load_dataset
 
     # Demo-safe: replay recorded LLM responses
-    os.environ["USE_MOCK_LLM"] = "true"
+    if os.environ.get("RECORD_LLM", "false").lower() != "true":
+        os.environ.setdefault("USE_MOCK_LLM", "true")
 
     patients = load_dataset("synthetic_data.json")
 
@@ -159,6 +163,8 @@ if __name__ == "__main__":
     print(f"Routing decision: {result['routing_decision']}")
     print(
         f"Guidelines found: {len(result.get('relevant_guidelines') or [])}")
+    print(f"  Review status:     {result.get('review_status')}")
+    print(f"  Review notes:      {(result.get('review_notes') or '')[:100]}")
     print(
         f"Audit logged: {result['audit_logged']} (id: {result['audit_id'][:8]}...)")
     if result.get("explanation"):
@@ -175,6 +181,8 @@ if __name__ == "__main__":
     print(f"Risk probability: {result['risk_probability']:.1%}")
     print(f"Reliability: {result['reliability_flag']}")
     print(f"Routing decision: {result['routing_decision']}")
+    print(f"  Review status:     {result.get('review_status')}")     
+    print(f"  Review notes:      {(result.get('review_notes') or '')[:100]}") 
     print(f"Audit logged: {result['audit_logged']}")
 
     print()
@@ -186,6 +194,7 @@ if __name__ == "__main__":
     result = assess_patient(bad)
     print(f"Privacy passed: {result['privacy_passed']}")
     print(f"Privacy notes: {result['privacy_notes'][:80]}...")
+    print(f"  Review status:     {result.get('review_status')}")
     print(f"Routing decision: {result.get('routing_decision')}")
     print(f"Risk probability: {result.get('risk_probability')}")
     print(f"Audit logged: {result['audit_logged']}")

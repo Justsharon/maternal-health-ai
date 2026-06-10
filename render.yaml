@@ -8,9 +8,11 @@ services:
     startCommand: PYTHONPATH=. uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /healthz
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: USE_MOCK_LLM
-        value: false
+        value: "false"
       - key: GROQ_API_KEY
-        sync: false  # set manually in Render dashboard, not in version control
+        sync: false
       - key: ALLOWED_ORIGINS
-        sync: false  # set after we know the Vercel URL
+        sync: false

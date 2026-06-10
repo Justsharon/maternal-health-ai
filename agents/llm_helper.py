@@ -60,10 +60,7 @@ def call_llm(
         if key in recordings:
             return recordings[key]
         # No recording found — return a safe placeholder
-        return (
-            "[Mock response unavailable for this input. "
-            "Run once with RECORD_LLM=true to capture a real response.]"
-        )
+        return "[NO_RECORDING_AVAILABLE]"
     
     # --- Real API call (Groq) ---
     try:

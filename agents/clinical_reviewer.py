@@ -95,10 +95,17 @@ def clinical_reviewer(state: SentinelState) -> SentinelState:
     Reads:  explanation, reliability_flag
     Writes: review_status, review_notes
     """
+    explanation = state.get("explanation") or {}
+    narrative = explanation.get("narrative", "") 
+
     # If there's no explanation (e.g. out_of_scope path), nothing to review
-    if not state.get("explanation"):
+    if "[NO_RECORDING_AVAILABLE]" in narrative:
         state["review_status"] = "no_explanation"
-        state["review_notes"] = "No explanation generated; nothing to review."
+        state["review_notes"] = (
+            "Explanation not generated. This deployment runs in mock mode "
+            "without a matching recording for this patient. Live LLM mode "
+            "(USE_MOCK_LLM=false with a Groq API key) produces real explanations."
+        )
         return state
 
     user_prompt = _build_review_prompt(state)

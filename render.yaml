@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     region: oregon
-    buildCommand: PYTHONPATH=. pip install -r requirements.txt && PYTHONPATH=. python3 -m build.precompute_embeddings && PYTHONPATH=. python3 -m build.precompute_fairness
+    buildCommand: PYTHONPATH=. pip install -r requirements.txt
     startCommand: PYTHONPATH=. uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /healthz
     envVars:

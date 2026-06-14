@@ -4,7 +4,7 @@ A 9-agent clinical AI pipeline for pre-eclampsia risk prediction, with calibrate
 probabilities, fairness auditing, and a Generator-Critic faithfulness pattern that
 catches LLM fabrication in medical explanations.
 
-**[Live demo ->](https://your-deploy-url.vercel.app)** | Built for portfolio review.
+**[Live demo ->](https://maternal-health-ai-assistant.vercel.app)** | Built for portfolio review.
 
 > Synthetic data only. Not for use with real patient information.
 

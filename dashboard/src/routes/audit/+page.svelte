@@ -28,33 +28,33 @@
 </script>
 
 <div class="mx-auto max-w-5xl px-6 py-12">
-  <a href="/" class="inline-flex items-center text-sm text-text-muted hover:text-text mb-8">
-    ← Back to patients
+  <a href="/" class="inline-flex items-center text-sm text-sky-400/80 hover:text-sky-400 mb-8">
+    Back to patients
   </a>
 
   <header class="mb-8">
-    <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-2">
+    <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-2">
       Accountability
     </p>
     <h1 class="text-3xl font-semibold tracking-tight mb-2">Audit Log</h1>
-    <p class="text-text-muted text-sm">
+    <p class="text-slate-400 text-sm">
       Immutable record of every prediction the system has made. Append-only by design.
     </p>
   </header>
 
   {#if loading}
-    <p class="text-text-muted">Loading audit entries…</p>
+    <p class="text-slate-400">Loading audit entries…</p>
   {:else if error}
     <div class="rounded-xl border border-error bg-error/10 p-5">
       <p class="text-error font-medium">Failed to load</p>
-      <p class="text-sm text-text-muted mt-1">{error}</p>
+      <p class="text-sm text-slate-400 mt-1">{error}</p>
     </div>
   {:else if entries.length === 0}
-    <p class="text-text-muted">No audit entries yet. Make an assessment to populate the log.</p>
+    <p class="text-slate-400">No audit entries yet. Make an assessment to populate the log.</p>
   {:else}
-    <div class="rounded-xl border border-border overflow-hidden">
+    <div class="rounded-xl border border-slate-400 overflow-hidden">
       <table class="w-full text-sm">
-        <thead class="bg-surface text-xs font-medium uppercase tracking-wider text-text-subtle">
+        <thead class="bg-slate-900 text-xs font-medium uppercase tracking-wider text-slate-500">
           <tr>
             <th class="text-left px-4 py-3">Time</th>
             <th class="text-left px-4 py-3">Patient</th>
@@ -65,13 +65,13 @@
         </thead>
         <tbody>
           {#each entries as e (e.entry_id)}
-            <tr class="border-t border-border hover:bg-surface transition-colors">
-              <td class="px-4 py-3 text-text-muted whitespace-nowrap">{formatTime(e.timestamp_utc)}</td>
+            <tr class="border-t border-slate-700 hover:bg-slate-900 transition-colors">
+              <td class="px-4 py-3 text-slate-400 whitespace-nowrap">{formatTime(e.timestamp_utc)}</td>
               <td class="px-4 py-3">
                 {#if e.patient_id}
-                  <a href="/patient/{e.patient_id}" class="text-approved hover:underline font-mono text-xs">{e.patient_id}</a>
+                  <a href="/patient/{e.patient_id}" class="text-sky-400 hover:underline font-mono text-xs">{e.patient_id}</a>
                 {:else}
-                  <span class="text-text-subtle text-xs italic">rejected at gate</span>
+                  <span class="text-slate-500 text-xs italic">rejected at gate</span>
                 {/if}
               </td>
               <td class="px-4 py-3 tabular-nums">{formatProb(e.risk_probability)}</td>
@@ -81,7 +81,7 @@
                 {:else if e.routing_decision === 'escalate'}
                   <StatusBadge variant="escalate" label="Escalate" />
                 {:else}
-                  <span class="text-text-subtle text-xs">—</span>
+                  <span class="text-slate-500 text-xs">—</span>
                 {/if}
               </td>
               <td class="px-4 py-3">
@@ -90,7 +90,7 @@
                 {:else if e.review_status === 'needs_review'}
                   <StatusBadge variant="needs-review" label="Needs review" />
                 {:else}
-                  <span class="text-text-subtle text-xs">—</span>
+                  <span class="text-slate-500 text-xs">—</span>
                 {/if}
               </td>
             </tr>
@@ -99,7 +99,7 @@
       </table>
     </div>
 
-    <p class="text-xs text-text-subtle mt-4 leading-relaxed">
+    <p class="text-xs text-slate-500 mt-4 leading-relaxed">
       Showing {entries.length} most recent entries. Storage: SQLite with WAL mode, append-only by API design.
     </p>
   {/if}

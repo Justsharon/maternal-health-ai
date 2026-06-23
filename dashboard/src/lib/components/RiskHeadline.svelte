@@ -12,8 +12,8 @@
     : '—');
 </script>
 
-<section class="rounded-3xl border border-border bg-surface p-10">
-  <p class="text-[11px] font-medium uppercase tracking-[0.12em] text-text-subtle mb-6">
+<section class="rounded-3xl border border-slate-900 bg-slate-900 p-10">
+  <p class="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500 mb-6">
     Pre-eclampsia risk estimate
   </p>
 
@@ -23,7 +23,7 @@
         <span class="text-7xl font-semibold tracking-tight tabular-nums leading-none">
           {riskPct}
         </span>
-        <span class="text-sm text-text-muted pb-2">
+        <span class="text-sm text-slate-400 pb-2">
           vs {baselinePct} baseline
         </span>
       </div>
@@ -40,14 +40,14 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap items-center gap-4 pt-6 border-t border-border">
+  <div class="flex flex-wrap items-center gap-4 pt-6 border-t border-slate-700">
     {#if result.reliability_flag === 'reliable'}
       <StatusBadge variant="reliable" label="Reliable prediction" />
     {:else if result.reliability_flag === 'reduced_reliability'}
       <StatusBadge variant="reduced" label="Reduced reliability" />
     {/if}
     {#if result.confidence != null}
-      <div class="text-sm text-text-muted">
+      <div class="text-sm text-slate-400">
         Model confidence
         <span class="text-text font-semibold tabular-nums ml-1">{result.confidence.toFixed(2)}</span>
       </div>

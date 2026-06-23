@@ -4,13 +4,13 @@
   let { variant, label }: { variant: Variant; label: string } = $props();
 
   const styles: Record<Variant, string> = {
-    'reliable':     'bg-reliable/15 text-reliable border-reliable/30',
-    'reduced':      'bg-reduced/15 text-reduced border-reduced/30',
-    'approved':     'bg-approved/15 text-approved border-approved/30',
-    'needs-review': 'bg-needs-review/15 text-needs-review border-needs-review/30',
-    'escalate':     'bg-escalate/15 text-escalate border-escalate/30',
-    'in-scope':     'bg-approved/15 text-approved border-approved/30',
-    'out-of-scope': 'bg-error/15 text-error border-error/30',
+    'reliable':     'bg-emerald-400/15 text-emerald-400 border-emerald-400/30',
+    'reduced':      'bg-amber-400/15 text-amber-400 border-amber-400/30',
+    'approved':     'bg-sky-400/15 text-sky-400 border-sky-400/30',
+    'needs-review': 'bg-yellow-400/15 text-yellow-400 border-yellow-400/30',
+    'escalate':     'bg-violet-500/15 text-violet-500 border-violet-500/30',
+    'in-scope':     'bg-sky-400/15 text-sky-400 border-sky-400/30',
+    'out-of-scope': 'bg-[#DC143C]/15 text-[#DC143C] border-[#DC143C]/30',
   };
 </script>
 

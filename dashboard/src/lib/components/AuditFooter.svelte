@@ -5,7 +5,7 @@
   let { result }: { result: AssessmentResult } = $props();
 </script>
 
-<section class="rounded-3xl border border-border bg-surface px-10 py-6">
+<section class="rounded-3xl border border-slate-900 bg-slate-900 px-10 py-6">
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-5">
         {#if result.review_status === 'approved'}
@@ -17,14 +17,14 @@
         {/if}
 
         {#if result.review_notes}
-            <span class="text-text-muted text-[13px] leading-snug max-w-xl">
+            <span class="text-slate-400 text-[13px] leading-snug max-w-xl">
             {result.review_notes}
             </span>
         {/if}
     </div>
 
     {#if result.audit_id}
-      <div class="text-[11px] text-text-subtle font-mono whitespace-nowrap">
+      <div class="text-[11px] text-slate-500 font-mono whitespace-nowrap">
         AUDIT {result.audit_id.slice(0, 8)}
       </div>
     {/if}

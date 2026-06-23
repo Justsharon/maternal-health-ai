@@ -23,15 +23,15 @@
 
 <div class="mx-auto max-w-4xl px-6 py-12">
   <div class="flex items-baseline justify-between mb-8">
-    <a href="/new" class="inline-flex items-center text-sm text-text-muted hover:text-text">
+    <a href="/new" class="inline-flex items-center text-sm text-slate-400 hover:text-text">
       ← Submit another patient
     </a>
-    <a href="/" class="text-sm text-text-muted hover:text-text">All patients</a>
+    <a href="/" class="text-sm text-slate-400 hover:text-text">All patients</a>
   </div>
 
   {#if result}
     <header class="mb-6">
-      <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-2">
+      <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-2">
         Custom assessment result
       </p>
       <h1 class="text-2xl font-semibold tracking-tight">
@@ -42,7 +42,7 @@
     {#if !result.privacy_passed}
       <div class="rounded-xl border border-error bg-error/10 p-5">
         <p class="text-error font-medium mb-1">Record rejected at privacy gate</p>
-        <p class="text-sm text-text-muted">{result.privacy_notes}</p>
+        <p class="text-sm text-slate-400">{result.privacy_notes}</p>
       </div>
     {:else}
       <div class="space-y-5">

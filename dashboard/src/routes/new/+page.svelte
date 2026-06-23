@@ -84,42 +84,42 @@
 </script>
 
 <div class="mx-auto max-w-3xl px-6 py-12">
-  <a href="/" class="inline-flex items-center text-sm text-text-muted hover:text-text mb-8">
-    ← Back to patients
+  <a href="/" class="inline-flex items-center text-sm text-sky-400/80 hover:text-sky-400 mb-8">
+    Back to patients
   </a>
 
   <header class="mb-8">
-    <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-2">
+    <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-2">
       Interactive
     </p>
     <h1 class="text-3xl font-semibold tracking-tight mb-2">New Patient Assessment</h1>
-    <p class="text-text-muted text-sm">
+    <p class="text-slate-400 text-sm">
       Enter synthetic patient data to run through the full nine-agent pipeline.
       All fields validate against the same Pydantic schema the privacy gate uses.
     </p>
     <p class="text-xs text-reduced mt-3">
-      ⚠️ Synthetic demo data only. This system is not designed for real patient information.
+      Synthetic demo data only. This system is not designed for real patient information.
     </p>
   </header>
 
   <form onsubmit={(e) => { e.preventDefault(); submit(); }} class="space-y-6">
     <!-- Demographics -->
-    <section class="rounded-2xl border border-border bg-surface p-6">
-      <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-5">
+    <section class="rounded-2xl border border-slate-900 bg-slate-900 p-6">
+      <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-5">
         Demographics
       </p>
       <div class="grid grid-cols-2 gap-4">
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">Age</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Age</span>
           <input type="number" bind:value={age} min="15" max="55" required
-                 class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                        focus:outline-none focus:border-text-muted" />
+                 class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                        focus:outline-none focus:border-slate-400" />
         </label>
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">Ethnicity</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Ethnicity</span>
           <select bind:value={ethnicity} required
-                  class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                         focus:outline-none focus:border-text-muted">
+                  class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                         focus:outline-none focus:border-slate-400">
             <option value="black_african">Black African</option>
             <option value="east_asian">East Asian</option>
             <option value="south_asian">South Asian</option>
@@ -129,63 +129,62 @@
           </select>
         </label>
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">Socioeconomic Proxy</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Socioeconomic Proxy</span>
           <select bind:value={socioeconomic_proxy} required
-                  class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                         focus:outline-none focus:border-text-muted">
+                  class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                         focus:outline-none focus:border-slate-400">
             <option value="low">Low</option>
             <option value="middle">Middle</option>
             <option value="high">High</option>
           </select>
         </label>
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">Parity</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Parity</span>
           <input type="number" bind:value={parity} min="0" max="10" required
-                 class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                        focus:outline-none focus:border-text-muted" />
+                 class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                        focus:outline-none focus:border-slate-400" />
         </label>
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">Current Gestational Week</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Current Gestational Week</span>
           <input type="number" bind:value={current_gestational_week} min="6" max="42" required
-                 class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                        focus:outline-none focus:border-text-muted" />
+                 class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                        focus:outline-none focus:border-slate-400" />
         </label>
         <label class="block">
-          <span class="text-sm text-text-muted mb-1.5 block">BMI at Booking</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">BMI at Booking</span>
           <input type="number" bind:value={bmi_at_booking} step="0.1" min="15" max="60" required
-                 class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                        focus:outline-none focus:border-text-muted" />
+                 class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                        focus:outline-none focus:border-slate-400" />
         </label>
       </div>
     </section>
 
     <!-- Risk factors -->
-    <section class="rounded-2xl border border-border bg-surface p-6">
-      <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-5">
+    <section class="rounded-2xl border border-slate-900 bg-slate-900 p-6">
+      <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-5">
         Risk Factors
       </p>
       <div class="grid grid-cols-2 gap-3">
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={multiple_pregnancy} class="accent-approved" />
+          <input type="checkbox" bind:checked={multiple_pregnancy} class="accent-sky-400" />
           Multiple pregnancy
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={pre_existing_hypertension} class="accent-approved" />
+          <input type="checkbox" bind:checked={pre_existing_hypertension} class="accent-sky-400" />
           Pre-existing hypertension
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={prior_preeclampsia} class="accent-approved" />
+          <input type="checkbox" bind:checked={prior_preeclampsia} class="accent-sky-400" />
           Prior pre-eclampsia
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={family_history_preeclampsia} class="accent-approved" />
+          <input type="checkbox" bind:checked={family_history_preeclampsia} class="accent-sky-400" />
           Family history of pre-eclampsia
         </label>
         <label class="col-span-2 mt-2">
-          <span class="text-sm text-text-muted mb-1.5 block">Diabetes</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Diabetes</span>
           <select bind:value={diabetes}
-                  class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                         focus:outline-none focus:border-text-muted">
+            class="w-full text-sky-500 rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm focus:outline-none focus:border-slate-400">
             <option value="none">None</option>
             <option value="gestational">Gestational</option>
             <option value="type1">Type 1</option>
@@ -196,33 +195,33 @@
     </section>
 
     <!-- BP readings -->
-    <section class="rounded-2xl border border-border bg-surface p-6">
+    <section class="rounded-2xl border border-slate-900 bg-slate-900 p-6">
       <div class="flex items-baseline justify-between mb-5">
-        <p class="text-xs font-medium uppercase tracking-wider text-text-subtle">
+        <p class="text-xs font-medium uppercase tracking-wider text-slate-500">
           Blood Pressure Readings
         </p>
-        <button type="button" onclick={addReading} class="text-xs text-approved hover:underline">
+        <button type="button" onclick={addReading} class="text-xs text-sky-400 hover:underline">
           + Add reading
         </button>
       </div>
-      <p class="text-xs text-text-subtle mb-4">
+      <p class="text-xs text-slate-500 mb-4">
         Trajectory across pregnancy is Sentinel's strongest predictive signal. Add 2–6 readings.
       </p>
       <div class="space-y-2">
         {#each bp_readings as reading, i}
           <div class="grid grid-cols-[1fr_1fr_1fr_auto] gap-2 items-center">
             <input type="number" bind:value={reading.gestational_week} min="6" max="42" placeholder="Week"
-                   class="rounded-md border border-border bg-bg px-3 py-1.5 text-sm
-                          focus:outline-none focus:border-text-muted" />
+                   class="rounded-md border border-slate-400 bg-bg px-3 py-1.5 text-sm
+                          focus:outline-none focus:border-slate-400" />
             <input type="number" bind:value={reading.systolic} min="70" max="200" placeholder="Systolic"
-                   class="rounded-md border border-border bg-bg px-3 py-1.5 text-sm
-                          focus:outline-none focus:border-text-muted" />
+                   class="rounded-md border border-slate-400 bg-bg px-3 py-1.5 text-sm
+                          focus:outline-none focus:border-slate-400" />
             <input type="number" bind:value={reading.diastolic} min="40" max="130" placeholder="Diastolic"
-                   class="rounded-md border border-border bg-bg px-3 py-1.5 text-sm
-                          focus:outline-none focus:border-text-muted" />
+                   class="rounded-md border border-slate-400 bg-bg px-3 py-1.5 text-sm
+                          focus:outline-none focus:border-slate-400" />
             <button type="button" onclick={() => removeReading(i)}
                     disabled={bp_readings.length <= 1}
-                    class="text-text-subtle hover:text-error text-xs px-2 disabled:opacity-30">
+                    class="text-red-500 hover:text-red-800 text-xs px-2 disabled:opacity-30">
               Remove
             </button>
           </div>
@@ -231,29 +230,29 @@
     </section>
 
     <!-- Symptoms -->
-    <section class="rounded-2xl border border-border bg-surface p-6">
-      <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-5">
+    <section class="rounded-2xl border border-slate-900 bg-slate-900 p-6">
+      <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-5">
         Current Symptoms
       </p>
       <div class="grid grid-cols-2 gap-3">
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={headache} class="accent-approved" /> Headache
+          <input type="checkbox" bind:checked={headache} class="accent-sky-400" /> Headache
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={visual_disturbance} class="accent-approved" /> Visual disturbance
+          <input type="checkbox" bind:checked={visual_disturbance} class="accent-sky-400" /> Visual disturbance
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={epigastric_pain} class="accent-approved" /> Epigastric pain
+          <input type="checkbox" bind:checked={epigastric_pain} class="accent-sky-400" /> Epigastric pain
         </label>
         <label class="flex items-center gap-2 text-sm">
-          <input type="checkbox" bind:checked={swelling} class="accent-approved" /> Swelling
+          <input type="checkbox" bind:checked={swelling} class="accent-sky-400" /> Swelling
         </label>
         <label class="col-span-2 mt-2">
-          <span class="text-sm text-text-muted mb-1.5 block">Proteinuria Level (optional, g/L)</span>
+          <span class="text-sm text-slate-400 mb-1.5 block">Proteinuria Level (optional, g/L)</span>
           <input type="number" bind:value={proteinuria_level} step="0.1" min="0" max="20"
                  placeholder="Leave blank if not measured"
-                 class="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm
-                        focus:outline-none focus:border-text-muted" />
+                 class="w-full rounded-md border border-slate-400 bg-bg px-3 py-2 text-sm
+                        focus:outline-none focus:border-slate-400" />
         </label>
       </div>
     </section>
@@ -261,15 +260,15 @@
     {#if error}
       <div class="rounded-xl border border-error bg-error/10 p-4">
         <p class="text-error font-medium text-sm mb-1">Validation failed</p>
-        <p class="text-xs text-text-muted leading-relaxed">{error}</p>
+        <p class="text-xs text-slate-400 leading-relaxed">{error}</p>
       </div>
     {/if}
 
     <div class="flex justify-end gap-3">
-      <a href="/" class="px-4 py-2 text-sm text-text-muted hover:text-text">Cancel</a>
+      <a href="/" class="px-4 py-2 text-sm text-slate-400 hover:text-slate-400 rounded-md border border-slate-900">Cancel</a>
       <button type="submit" disabled={submitting}
-              class="px-4 py-2 text-sm font-medium rounded-md bg-approved/15 text-approved
-                     border border-approved/30 hover:bg-approved/25 disabled:opacity-50">
+              class="px-4 py-2 text-sm font-medium rounded-md bg-sky-400/15 text-sky-400
+                     border border-sky-400/30 hover:bg-sky-400/25 disabled:opacity-50">
         {submitting ? 'Running pipeline…' : 'Run Assessment'}
       </button>
     </div>

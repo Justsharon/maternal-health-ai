@@ -11,22 +11,22 @@
   const maxAbs = $derived(Math.max(...significant.map((c) => Math.abs(c.shap_value)), 0.01));
 </script>
 
-<section class="rounded-3xl border border-border bg-surface overflow-hidden">
+<section class="rounded-3xl border border-slate-900 bg-slate-900 overflow-hidden">
   <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
     <!-- LEFT: the narrative -->
 `   <div class="p-6">
-    <p class="text-xs font-medium uppercase tracking-wider text-text-subtle mb-3">
+    <p class="text-xs font-medium uppercase tracking-wider text-slate-500 mb-3">
         Plain-language explanation
     </p>
     {#if explanation.narrative.includes('[NO_RECORDING_AVAILABLE]')}
         <div class="rounded-md border border-reduced/30 bg-reduced/5 p-4">
         <p class="text-sm text-reduced font-medium mb-1">Live explanation not available</p>
-        <p class="text-xs text-text-muted leading-relaxed">
+        <p class="text-xs text-slate-400 leading-relaxed">
             This deployment runs in deterministic mock mode for the pre-recorded demo
             patients. Custom patients require the live LLM mode, which is enabled in
             production deployments with a Groq API key configured.
         </p>
-        <p class="text-xs text-text-subtle mt-2">
+        <p class="text-xs text-slate-500 mt-2">
             The feature contributions on the right are still computed in real time
             and show the model's actual reasoning.
         </p>
@@ -39,8 +39,8 @@
     </div>`
 
     <!-- RIGHT: contributions (40% on desktop) -->
-    <div class="lg:col-span-2 p-10 border-t lg:border-t-0 border-border">
-      <p class="text-[11px] font-medium uppercase tracking-[0.12em] text-text-subtle mb-5">
+    <div class="lg:col-span-2 p-10 border-t lg:border-t-0 border-slate-700">
+      <p class="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500 mb-5">
         Feature contributions
       </p>
 
@@ -53,24 +53,24 @@
               <span class="text-[13px] text-text font-medium leading-snug">
                 {c.label}
               </span>
-              <span class="text-[11px] text-text-subtle shrink-0 tabular-nums">
+              <span class="text-[11px] text-slate-500 shrink-0 tabular-nums">
                 {isPositive ? '+' : '−'}{Math.abs(c.shap_value).toFixed(3)}
               </span>
             </div>
             <div class="h-2 rounded-full bg-bg overflow-hidden">
               <div
-                class="h-full rounded-full {isPositive ? 'bg-escalate' : 'bg-reliable'}"
+                class="h-full rounded-full {isPositive ? 'bg-violet-500' : 'bg-emerald-400'}"
                 style="width: {widthPct}%"
               ></div>
             </div>
-            <p class="text-[11px] text-text-muted mt-1.5">
+            <p class="text-[11px] text-slate-400 mt-1.5">
               {isPositive ? 'Increased' : 'Decreased'} the estimate
             </p>
           </li>
         {/each}
       </ul>
 
-      <p class="text-[11px] leading-relaxed text-text-subtle mt-8 pt-5 border-t border-border">
+      <p class="text-[11px] leading-relaxed text-slate-500 mt-8 pt-5 border-slate-400">
         The narrative on the left describes only these contributions. Any claim not traceable to this list would be flagged by the Clinical Reviewer agent.
       </p>
     </div>

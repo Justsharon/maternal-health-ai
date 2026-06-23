@@ -27,22 +27,22 @@
 </script>
 
 <div class="mx-auto max-w-6xl px-6 py-16">
-  <a href="/" class="inline-flex items-center text-sm text-text-muted hover:text-text mb-12 transition-colors">
-    ← Back to patients
+  <a href="/" class="inline-flex items-center text-sm text-sky-400/80 hover:text-sky-400 mb-12 transition-colors">
+    Back to patients
   </a>
 
   {#if loading}
-    <p class="text-text-muted">Running assessment through the 9-agent pipeline…</p>
+    <p class="text-slate-400">Running assessment through the 9-agent pipeline…</p>
   {:else if error}
     <div class="rounded-3xl border border-error bg-error/10 p-8">
       <p class="text-error font-semibold mb-2">Assessment failed</p>
-      <p class="text-sm text-text-muted">{error}</p>
+      <p class="text-sm text-slate-400">{error}</p>
     </div>
   {:else if result}
     {#if !result.privacy_passed}
       <div class="rounded-3xl border border-error bg-error/10 p-8">
         <p class="text-error font-semibold mb-2">Record rejected at privacy gate</p>
-        <p class="text-sm text-text-muted">{result.privacy_notes}</p>
+        <p class="text-sm text-slate-400">{result.privacy_notes}</p>
       </div>
     {:else}
       <div class="space-y-8">
